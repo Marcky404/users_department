@@ -1,0 +1,44 @@
+    Repositório
+
+ - Repositórios são classes ou interfaces que possuem  métodos para que outras classes utilizem.
+    È um padrão de projeto que visa mediar a pesquisa de objetos de dominio entre a camada
+    de dominio e a camada de mapeamento de dados usando uma interface semelhante à de uma coleção.
+
+ - O padrão propõe que se utilize um objecto como intermediário entre a camada de dominio e a camada
+    de mapeamento de dados. Este objeto recebe especificações das pesquisas, na forma de objetos e as traduz
+    para a camada de mapeamento na forma prescrita por pelo mecanismo de mapeamento. A vantagem é que o dominio
+    especifica essas pesquisas como se os dados estivessem em memoria numa coleção gigante isolando o dominio
+    de saber exactamente onde estãos os dados e como a pesquisa se processa.
+
+    Padrão Repository
+
+ - De acordo com Eric Evans em seu livro Domain-Driven Design, o "repository é um mecanismo para
+    encapsular o banco, recuperar e buscar comportamento que simulam uma coleção de objetos."
+
+    Como funciona?
+
+ - O objeto Repository tem uma interface simples. Ele recebe um objeto com a especificação
+   da pesquisa e retorna uma coleção com os objetos de dominio que satisfazem essa pesquisa.
+
+    O Reposotório possue 2 funções:
+
+
+    *Traduzir a especificação de pesquisa enviada pela camada de dominio para uma frase SQL e
+    passar essa frase ao DAO
+
+    *Converter os dados retornados pela pesquisa em objetos de dominio
+
+    Quando usar o Repository?
+
+ - Quando sua classe for uma coleção de informação que pode ser inserida uma coleção de dados.
+
+    Há três repositórios muito utilizados que são:
+    *CrudRepository
+    *JPARepository
+    *Repository
+
+
+   Fonte: https://sergiotaborda.wordpress.com/desenvolvimento-de-software/java/patterns/repository/
+
+
+
